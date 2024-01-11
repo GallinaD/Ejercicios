@@ -1,0 +1,56 @@
+* {
+    font-family: "Roboto", sans-serif;
+}
+
+header {
+    display: flexbox;
+    background-color: #222;
+}
+
+#logo {
+    color: orange;
+    font-weight: bold;
+    font-size: 50px;
+}
+
+#menu {
+    color: white;
+    list-style: none;
+}
+
+#menu li {
+    display: inline;
+    padding: 8px;
+}
+
+h4 {
+    color: gray;
+}
+
+img {
+    width: 500px;
+}
+
+footer {
+    background-color: #222;
+    color: white;
+    height: 100px;
+}
+
+footer p {
+    text-align: center;
+}
+
+.publicidad {
+    float: right;
+}
+
+.publicidad img {
+    width: 300px;
+    margin-left: 15px;
+}
+
+.texto {
+    text-align: justify;
+    display: block;
+}
