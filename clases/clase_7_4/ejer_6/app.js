@@ -1,4 +1,4 @@
-let frase = ["esto", "es", "un", "array", "con", "siete", "palabras"];
+let frase = ["esto", "es", "un", "fraseay", "con", "siete", "palabras"];
 
 alert(frase.sort());
 
