@@ -112,7 +112,7 @@ if (mes <= mes2) {
 
     } alert(dias - dia1 + dia2);
 } else {                               //Invertido se va a la puta
-    for (let i = mes2; i > mes; i--) {
+    for (let i = mes2; i > mes; i++) {
         dias += diasMes(i);
 
     } console.log(dias);
