@@ -107,10 +107,14 @@ function diasMes(mes) {
 let dias = 0;
 
 if (mes <= mes2) {
-    for (let i = mes; i < mes2; i++) { //Funciona en el caso de que el mes 1 sea menor que el 2
+    for (let i = mes; i < mes2; i++) { 
         dias += diasMes(i);
 
     } alert(dias - dia1 + dia2);
-} else {                               //Invertido se va a la puta
-    //¿cambiar el orden?
+} else {             
+    for (let i = mes2; i < mes; i++) {
+        dias += diasMes(i);
+        
+    } alert(dias - dia1 + dia2);       
+    
 }
