@@ -1,0 +1,35 @@
+* {
+    font-family: "Montserrat", sans-serif;
+}
+
+.container {
+    color: #ffffff;
+    background-image: url(https://images2.alphacoders.com/108/1088117.jpg);
+    background-size: cover;
+}
+
+ul {
+    clear: left;
+}
+
+li {
+    list-style: none;
+    float: right;
+    margin: 0 1rem;
+    margin-top: 0.3215rem;
+    padding: 0.75rem;
+    padding-bottom: 0.3125rem;
+}
+
+#img-perfil {
+    padding-top: 5rem;
+    clear: both;
+    display: flex;
+    justify-content: center;
+}
+
+#img-perfil img {
+    border-radius: 50%;
+    width: 180px;
+    height: 180px;
+}
