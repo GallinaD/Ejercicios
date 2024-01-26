@@ -32,7 +32,7 @@ body {
 
 .barra-nav li:hover {
     cursor: pointer;
-    background-color: rgba(255, 255, 255,0.4);
+    background-color: rgba(255, 255, 255, 0.4);
     border-radius: 3px;
 
 }
@@ -50,7 +50,8 @@ body {
     height: 180px;
 }
 
-#titulo, #titulo-des {
+#titulo,
+#titulo-des {
     text-align: center;
 }
 
@@ -117,4 +118,46 @@ p {
 table {
     border-spacing: 1.61em;
     text-indent: 1rem;
+}
+
+.sub-titulo {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 1.74rem;
+    margin-top: 140px;
+    margin-bottom: -50px;
+}
+
+.retrato img {
+    max-width: 400px;
+    margin: 15% 0;
+}
+
+.galeria {
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 1.5rem 1rem;
+    margin-top: 70px;
+}
+
+.columna {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: 15px;
+    margin-left: 15px;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 0 4px;
+}
+
+.columna img {
+    max-width: 500px;
+    object-fit: cover;
+    margin: 8px 18px;
+    padding: 0 4px;
+    box-shadow:  0px 10px 25px 0px rgba(0, 0, 0, 0.3)
+    /* box-shadow: 0px 5px 25px 0px rgba(0, 0, 0, 0.2); */
 }
