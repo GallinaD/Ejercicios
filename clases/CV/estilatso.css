@@ -213,3 +213,27 @@ table {
     text-align: center;
     margin-top: 140px;
   }
+
+  .exp {
+    background-color: rgb(55, 85, 145);
+    color: #ffffff;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 7%;
+    margin-right: 30px;
+  }
+
+  .exp p {
+    font-size: 1rem;
+  }
+
+  /*container experiencia*/
+
+  .exp-cont {
+    display: flex;
+  }
+
+  .exp-cont p {
+    align-self: center;
+    margin-right: 15px;
+  }
