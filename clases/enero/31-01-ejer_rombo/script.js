@@ -5,20 +5,6 @@
 // -++++++++-     1 espacio  8 simbolos
 // ++++++++++     10 simbolos
 
-let arreglo = "";
-
-for (let i = 0; i < array.length; i++) {
-    
-    
-}
-
-
-
-
-
-
-
-
 /*
 function hexagono() {
   var dibujo = "";
@@ -45,14 +31,21 @@ function hexagono() {
   alert(dibujo);
 }
 hexagono();
-
-
-
-const hexagono = [
-    [4, 10, '+', ' '],
-    [2, 8, '+', ' '],
-    [1, 3, '+', ' '],
-    [3, 1, '+', ' ']
-  ];
 */
+
+var dibujo = "";
+
+for (let i = 2; i <= 5; i++) {
+  for (let j = 5-1; j >= i; j--) {
+    dibujo += ("-")
+    
+  }
+  for (let k = i-1; k <= i; k++) {
+    dibujo += ("+");
+    
+  }
+  dibujo += "\n";
+}
+alert(dibujo)
+
 
