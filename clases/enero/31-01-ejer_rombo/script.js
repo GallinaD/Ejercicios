@@ -32,20 +32,46 @@ function hexagono() {
 }
 hexagono();
 */
-
+/*
 var dibujo = "";
 
-for (let i = 2; i <= 5; i++) {
-  for (let j = 5-1; j >= i; j--) {
-    dibujo += ("-")
-    
+for (let i = 0; i <= 3; i++) {
+  let j;
+  for ( j = 2; j >= i; j--) {
+    dibujo += ("-");
   }
-  for (let k = i-1; k <= i; k++) {
+  for (let k = i; k <= 6; k++) {
     dibujo += ("+");
     
   }
   dibujo += "\n";
 }
 alert(dibujo)
+*/
+
+var dibujo = "";
+var espacios = 3;
+var finK = 6;
+
+for (let i = 0; i <= 3; i++) {
+  let j;
+  for ( j = 0; j < espacios; j++) {
+    dibujo += ("-");
+  }
+  for (let k = j; k <= finK; k++) {
+    dibujo += ("+");
+    
+  }
+  dibujo += "\n";
+  espacios--;
+  finK++;
+
+}
+
+if (i==6) {
+  // ...                                                            
+}
+
+alert(dibujo);
 
 
