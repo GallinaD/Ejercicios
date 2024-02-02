@@ -55,23 +55,38 @@ var finK = 6;
 
 for (let i = 0; i <= 3; i++) {
   let j;
-  for ( j = 0; j < espacios; j++) {
-    dibujo += ("-");
+  for (j = 0; j < espacios; j++) {
+    dibujo += (" ");
   }
   for (let k = j; k <= finK; k++) {
     dibujo += ("+");
-    
+
   }
   dibujo += "\n";
   espacios--;
   finK++;
 
+  if (i == 3) {
+    espacios = 1;
+    finK = 8;
+    for (i = 0; i <= 2; i++) { //i<=2
+
+      for (j = 0; j < espacios; j++) {
+        dibujo += (" ");
+      }
+      for (let k = j; k <= finK; k++) {
+        dibujo += ("+");
+
+      }
+      dibujo += "\n";
+      espacios++;
+      finK--;
+
+    }
+  }
 }
 
-if (i==6) {
-  // ...                                                            
-}
-
+console.log(dibujo);
 alert(dibujo);
 
 

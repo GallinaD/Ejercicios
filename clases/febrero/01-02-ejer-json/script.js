@@ -66,5 +66,4 @@ datos2["localidade 4"].Habitantes = "14";
     "Capital": "Tóquio"
     }
 }
-
 */
