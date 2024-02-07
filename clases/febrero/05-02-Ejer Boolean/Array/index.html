@@ -8,8 +8,15 @@
 <body>
     <form>
         <label for="matrix">Arreglo:</label>
-        <input type="text" name="arreglo" id="matrix">
-        <input type="button" value="Mostrar">
+        <input type="number" name="arreglo" id="matrix">
+        <input type="button" value="Mostrar" onclick="getSize()">
+        <br>
+        <br>
+        <label for="arreglo2">Inserta un máximo de 10 números separado por espacios:</label>
+        <br><br>
+        <input type="text" name="arreglo2" id="arreglo2">
+        <br><br>
+        <input type="button" value="Media" onclick="media()">
     </form>
     <script src="script.js"></script>
 </body>
