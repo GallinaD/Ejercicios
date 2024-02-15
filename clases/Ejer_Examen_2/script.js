@@ -45,6 +45,7 @@ document.addEventListener("DOMContentLoaded", () => {
   rowDatos.appendChild(datoMedia);
   rowDatos.appendChild(datoAsig);
 
+  // Lista ordenada
 
 
 
@@ -104,11 +105,11 @@ document.addEventListener("DOMContentLoaded", () => {
     let mediaTabla = media(arrayEdad);
     datoMedia.innerText = mediaTabla;
 
-    // // Prueba
+    // // Función para agregar asignaturas
     let arregloDatos = [];
     asigMas(arrayAsig, arregloDatos);
     datoAsig.innerText = arregloDatos;
-    
+
   })
 })
 
@@ -198,35 +199,25 @@ function media(array) {
 
 // Función que busca las assignatura más repetida
 
-function asigMas(array,datos){
+function asigMas(array, datos) {
   array.sort()
   let arregloNorep = [];
   let vecesRep = [];
   let contador = 1;
 
   for (let i = 0; i < array.length; i++) {
-    if(array[i+1]==array[i]){
+    if (array[i + 1] == array[i]) {
       contador++;
     } else {
       arregloNorep.push(array[i]);
       vecesRep.push(contador);
       contador = 1;
     }
-    
+
   }
 
   for (let i = 0; i < arregloNorep.length; i++) {
-     if(vecesRep[i] >= vecesRep[i+1] || vecesRep[i+1] == undefined){
       datos.push(`${arregloNorep[i]}: ${vecesRep[i]} alumnos ${'\n'}`)
-      
-    } else {
-      datos.push(`${arregloNorep[i+1]}: ${vecesRep[i+1]} alumnos ${'\n'}`)
-      
-    }
-    
   }
-  console.log(arregloNorep)
-  console.log(vecesRep)
+
 }
-
-
