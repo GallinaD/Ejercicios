@@ -216,7 +216,13 @@ function asigMas(array,datos){
   }
 
   for (let i = 0; i < arregloNorep.length; i++) {
-     datos.push(`${arregloNorep[i]}: ${vecesRep[i]} alumnos ${'\n'}`)
+     if(vecesRep[i] >= vecesRep[i+1] || vecesRep[i+1] == undefined){
+      datos.push(`${arregloNorep[i]}: ${vecesRep[i]} alumnos ${'\n'}`)
+      
+    } else {
+      datos.push(`${arregloNorep[i+1]}: ${vecesRep[i+1]} alumnos ${'\n'}`)
+      
+    }
     
   }
   console.log(arregloNorep)
