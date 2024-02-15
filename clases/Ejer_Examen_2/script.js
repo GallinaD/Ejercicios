@@ -1,7 +1,7 @@
 // Crear el formulario al cargar la página
 
 document.addEventListener("DOMContentLoaded", () => {
-  var formulario = document.createElement("form");
+  let formulario = document.createElement("form");
 
   formulario.setAttribute('style', "width:300px;margin: 15% auto");
 
@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
   makeForm("Edad", formulario);
   makeForm("Asignatura", formulario);
 
-  var inputBoton = document.createElement("input");
+  let inputBoton = document.createElement("input");
   inputBoton.innerHTML = "Enviar"
   inputBoton.setAttribute("id", "Aceptar");
   inputBoton.setAttribute("type", "button");
@@ -24,6 +24,31 @@ document.addEventListener("DOMContentLoaded", () => {
   let arrayAsig = [];
 
 
+  // Tabla
+  let tabla = document.createElement("table");
+  let rowCabecera = document.createElement("tr");
+  let thMedia = document.createElement("th");
+  thMedia.innerText = "Media de edad de los alumnos";
+  let thAsig = document.createElement("th");
+  thAsig.innerText = "Asignatura más cursada";
+  let rowDatos = document.createElement("tr")
+  let datoMedia = document.createElement("td");
+  let datoAsig = document.createElement("td");
+
+
+
+  document.body.appendChild(tabla);
+  tabla.appendChild(rowCabecera);
+  tabla.appendChild(rowDatos);
+  rowCabecera.appendChild(thMedia);
+  rowCabecera.appendChild(thAsig);
+  rowDatos.appendChild(datoMedia);
+  rowDatos.appendChild(datoAsig);
+
+
+
+
+
   inputBoton.addEventListener("click", () => {
     // Obtenemos el valor de los inputs por el id
 
@@ -35,14 +60,10 @@ document.addEventListener("DOMContentLoaded", () => {
     let getEdad = document.getElementById("EdadInput");
     let getAsig = document.getElementById("AsignaturaInput");
 
-    // Tabla
-
-
-
     //Comprobar validaciones y que sea distinto de 0
 
     let okNombre = false;
-    let okEdad = false;    // Uso estas variables para que, al comprobar todos los datos sean true, lo guarde en un local storage
+    let okEdad = false;    // Uso estas variables para que, al comprobar todos los datos sean true, lo guarde en local storage
     let okAsig = false;
 
 
@@ -78,6 +99,16 @@ document.addEventListener("DOMContentLoaded", () => {
       localStorage.setItem("Asignatura", JSON.stringify(arrayAsig));
     }
 
+
+    // Obtener la media de edad de los alumnos al precionar el boton
+    let mediaTabla = media(arrayEdad);
+    datoMedia.innerText = mediaTabla;
+
+    // // Prueba
+    let arregloDatos = [];
+    asigMas(arrayAsig, arregloDatos);
+    datoAsig.innerText = arregloDatos;
+    
   })
 })
 
@@ -150,4 +181,46 @@ function valAsignatura(asignatura) {
 
   return true;
 }
+
+// Función que saca la media de un array
+
+
+function media(array) {
+  let contadorArray = 0;
+
+  for (let i = 0; i < array.length; i++) {
+    contadorArray += parseInt(array[i]);
+
+  }
+  return Math.trunc(contadorArray / array.length);
+}
+
+
+// Función que busca las assignatura más repetida
+
+function asigMas(array,datos){
+  array.sort()
+  let arregloNorep = [];
+  let vecesRep = [];
+  let contador = 1;
+
+  for (let i = 0; i < array.length; i++) {
+    if(array[i+1]==array[i]){
+      contador++;
+    } else {
+      arregloNorep.push(array[i]);
+      vecesRep.push(contador);
+      contador = 1;
+    }
+    
+  }
+
+  for (let i = 0; i < arregloNorep.length; i++) {
+     datos.push(`${arregloNorep[i]}: ${vecesRep[i]} alumnos ${'\n'}`)
+    
+  }
+  console.log(arregloNorep)
+  console.log(vecesRep)
+}
+
 
