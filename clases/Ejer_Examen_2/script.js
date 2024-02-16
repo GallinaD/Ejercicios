@@ -45,12 +45,12 @@ document.addEventListener("DOMContentLoaded", () => {
   rowDatos.appendChild(datoMedia);
   rowDatos.appendChild(datoAsig);
 
-  // Lista ordenada
-
-
-
 
   inputBoton.addEventListener("click", () => {
+
+    let prev_list = document.getElementsByTagName("ol");
+        if(prev_list.length != 0)
+            prev_list[0].remove();
     // Obtenemos el valor de los inputs por el id
 
     let valorNom = document.getElementById("NombreInput").value;
@@ -110,6 +110,9 @@ document.addEventListener("DOMContentLoaded", () => {
     asigMas(arrayAsig, arregloDatos);
     datoAsig.innerText = arregloDatos;
 
+    // lista nombres
+
+    listaNombres(arrayNom);
   })
 })
 
@@ -220,4 +223,18 @@ function asigMas(array, datos) {
       datos.push(`${arregloNorep[i]}: ${vecesRep[i]} alumnos ${'\n'}`)
   }
 
+}
+
+// función lista de alumnos
+
+function listaNombres(array){
+  let lista = document.createElement("ol");
+  document.body.appendChild(lista);
+
+  for (let i = 0; i < array.length; i++) {
+    let itemList = document.createElement("li");
+    itemList.innerText = array[i];
+    lista.appendChild(itemList);
+    
+  }
 }
