@@ -1,9 +1,42 @@
+body {
+    background-color: pink;
+    background-image: url(/assets/Kuromi-PNG-Image-HD.png);
+    background-size: 15%;
+    background-repeat: no-repeat;
+}
+
 table {
     margin: 0 auto;
+    border-collapse: collapse;
     
+}
+
+th {
+    background-color: rgb(197, 197, 197);
 }
 
 th, td {
     border: solid gray 3px;
-    height: 10px;
+    height: 20px;
+    
+}
+
+td {
+    background-color: #fff;
+}
+
+#Aceptar {
+    background-color: #fff;
+    color: gray;
+    padding: 0.5rem;
+    border: #fff;
+
+}
+
+#Aceptar:hover {
+    cursor: pointer;
+}
+
+#Aceptar:active {
+    color: pink;
 }
